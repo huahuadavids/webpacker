@@ -1,35 +1,12 @@
-#deep into webpack 
+# deep into webpack 
 
-install
-
-```
-npm install webpack webpack-cli --save-dev
-
-```
-
-run
-
-```
-
-npx webpack 
-
-// package script 
-'build" : "webpack"
-
-```
-config
-```
-// envirorment development or production 
-npx webpack --mode development 
-// development for developer more logs 
-// production can open tree shake & uglyfyjs 
-
-```
-
-### bundle解析
+### bundle解析 (./dist1-simple)
 - bundle.js 就是一个匿名执行函数，
 - 后边的参数，是文件路径是key，代码是value，
 - 前边都是一样的, 重点是一个__webpack_require__ 方法
+
+### bundle 按需加载解析 (./dist2-lazy-load)
+- 原理 jsonp 
 
 ### webpack core  
 - webpack 内部有一个事件流，叫tapable 
