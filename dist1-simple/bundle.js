@@ -18,39 +18,25 @@ const modules = {
 // The module cache
 let installedModules = {};
 
-// The require function
+// moduleId ./src/index.js
 function require(moduleId) {
-  console.log(moduleId)
 
-  if (installedModules[moduleId]) {
-    console.log("有 return")
-    return installedModules[moduleId].exports;
-  }
-  // Create a new module (and put it into the cache)
-  let module = {
-    i: moduleId,
-    l: false,
-    exports: {}
-  };
+  if (installedModules[moduleId]) return installedModules[moduleId].exports;
 
-  installedModules[moduleId] = module;
+  // 创建一个新的module
+  let obj = { id: moduleId, loaded: false, exports: {} };
 
-  // Execute the module function
-  modules[moduleId].call(module.exports, module, module.exports, require);
+  // 把新的module放到缓存中
+  installedModules[moduleId] = obj;
 
-  // Flag the module as loaded
-  module.l = true;
-
-  // Return the exports of the module
-  return module.exports;
+  // 执行 参数模块 的方法
+  modules[moduleId].call(obj.exports, obj, obj.exports, require);
+  obj.loaded = true;
+  return obj.exports;
 }
 
-
-// expose the modules object (__webpack_modules__)
-require.m = modules;
-
-// expose the module cache
-require.c = installedModules;
+require.modules = modules;
+require.cache = installedModules;
 
 // define getter function for harmony exports
 require.d = function (exports, name, getter) {
@@ -104,9 +90,9 @@ require.o = function (object, property) {
 };
 
 // __webpack_public_path__
-require.p = "";
+require.public_path = "";
 
-require.s = "./src/index.js";
+require.start = "./src/index.js";
 // Load entry module and return exports
-require(require.s);
+require(require.start);
 
