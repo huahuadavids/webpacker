@@ -1,11 +1,11 @@
 # deep into webpack 
 
-### bundle解析 (./dist1-simple)
+### 打包后的代码解析-简单解析 (./dist1-simple)
 - bundle.js 就是一个匿名执行函数，
 - 后边的参数，是文件路径是key，代码是value，
 - 前边都是一样的, 重点是一个__webpack_require__ 方法
 
-### bundle 按需加载解析 (./dist2-lazy-load)
+### 打包后的代码-按需加载解析 (./dist2-lazy-load)
 - 原理 jsonp 
 
 ### webpack core  
@@ -15,7 +15,7 @@
 - loader 模块转行器，如 less 转 css
 - plugins 插件 工作流处理
 - output.path 必须是绝对路径
-- 
+
 ### webpack 运行过程
 > webpack启动后会从entry配置的module，递归解析entry所有的module，每次找到一个module。就会根据配置的loader，去
 找出对应的转换规则，对module转换后，再解析出当前module依赖的module，这些模块会以entry为单位就行分组，
