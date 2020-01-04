@@ -1,3 +1,7 @@
-var a = require("./module1")
 
-a()
+
+document.getElementById("play").onclick = function () {
+  import("./video.js").then(res => {
+    res()
+  })
+}

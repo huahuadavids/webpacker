@@ -1,5 +1,5 @@
-function a(){
+function add(){
   console.log("this is module a")
 }
 
-module.exports = a;
+module.exports = add;
