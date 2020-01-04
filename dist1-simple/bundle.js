@@ -1,5 +1,6 @@
 /**
  * @title 简化为最简单的代码便于理解
+ * @desc 替换所有webpack_require 为 require
  */
 
 
@@ -7,7 +8,6 @@ const modules = {
   "./src/index.js": function (module, exports, require) {
     eval("var a =  require(/*! ./math */ \"./src/math.js\")\r\n\r\na()\n\n//# sourceURL=webpack:///./src/index.js?");
   },
-
 
   "./src/math.js": function (module, exports) {
     eval("function add(){\r\n  console.log(\"this is module a\")\r\n}\r\n\r\nmodule.exports = add;\n\n//# sourceURL=webpack:///./src/math.js?");
@@ -20,7 +20,6 @@ let installedModules = {};
 
 // moduleId ./src/index.js
 function require(moduleId) {
-
   if (installedModules[moduleId]) return installedModules[moduleId].exports;
 
   // 创建一个新的module
@@ -29,7 +28,7 @@ function require(moduleId) {
   // 把新的module放到缓存中
   installedModules[moduleId] = obj;
 
-  // 执行 参数模块 的方法
+  // 执行 参数模块 的方法, 把this指向 obj.exports
   modules[moduleId].call(obj.exports, obj, obj.exports, require);
   obj.loaded = true;
   return obj.exports;
