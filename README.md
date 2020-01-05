@@ -1,7 +1,7 @@
 # deep into webpack 
 
 ### 打包后的代码解析-简单解析 (./dist1-simple)
-- bundle.js 就是一个匿名执行函数，
+- bundle1-71k.js 就是一个匿名执行函数，
 - 后边的参数，是文件路径是key，代码是value，
 - 前边都是一样的, 重点是一个__webpack_require__ 方法
 
