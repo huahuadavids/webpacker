@@ -1,0 +1,86 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "sum",
+        "range": [
+          9,
+          12
+        ]
+      },
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "a",
+          "range": [
+            13,
+            14
+          ]
+        },
+        {
+          "type": "Identifier",
+          "name": "b",
+          "range": [
+            15,
+            16
+          ]
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "BinaryExpression",
+              "operator": "+",
+              "left": {
+                "type": "Identifier",
+                "name": "a",
+                "range": [
+                  28,
+                  29
+                ]
+              },
+              "right": {
+                "type": "Identifier",
+                "name": "b",
+                "range": [
+                  30,
+                  31
+                ]
+              },
+              "range": [
+                28,
+                31
+              ]
+            },
+            "range": [
+              21,
+              32
+            ]
+          }
+        ],
+        "range": [
+          17,
+          34
+        ]
+      },
+      "generator": false,
+      "expression": false,
+      "async": false,
+      "range": [
+        0,
+        34
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    34
+  ]
+}

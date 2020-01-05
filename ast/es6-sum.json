@@ -1,0 +1,88 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "a",
+            "range": [
+              4,
+              5
+            ]
+          },
+          "init": {
+            "type": "ArrowFunctionExpression",
+            "id": null,
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "a",
+                "range": [
+                  9,
+                  10
+                ]
+              },
+              {
+                "type": "Identifier",
+                "name": "b",
+                "range": [
+                  11,
+                  12
+                ]
+              }
+            ],
+            "body": {
+              "type": "BinaryExpression",
+              "operator": "+",
+              "left": {
+                "type": "Identifier",
+                "name": "a",
+                "range": [
+                  17,
+                  18
+                ]
+              },
+              "right": {
+                "type": "Identifier",
+                "name": "b",
+                "range": [
+                  19,
+                  20
+                ]
+              },
+              "range": [
+                17,
+                20
+              ]
+            },
+            "generator": false,
+            "expression": true,
+            "async": false,
+            "range": [
+              8,
+              20
+            ]
+          },
+          "range": [
+            4,
+            20
+          ]
+        }
+      ],
+      "kind": "let",
+      "range": [
+        0,
+        20
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    20
+  ]
+}
