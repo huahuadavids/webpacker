@@ -148,7 +148,7 @@ eval("var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */\nvar freeGlobal = typeof global == 'object' && global && global.Object === Object && global;\nmodule.exports = freeGlobal;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack:///./node_modules/_lodash@4.17.15@lodash/_freeGlobal.js?");
+eval("/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */\nvar freeGlobal = typeof global == 'object' && global && global.Object === Object && global;\nmodule.exports = freeGlobal;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../_webpack@4.41.5@webpack/buildin/global.js */ \"./node_modules/_webpack@4.41.5@webpack/buildin/global.js\")))\n\n//# sourceURL=webpack:///./node_modules/_lodash@4.17.15@lodash/_freeGlobal.js?");
 
 /***/ }),
 
@@ -240,7 +240,7 @@ eval("/**\n * Checks if `value` is object-like. A value is object-like if it's n
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
+/***/ "./node_modules/_webpack@4.41.5@webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/

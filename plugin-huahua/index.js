@@ -1,17 +1,4 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _helperPluginUtils = require("@babel/helper-plugin-utils");
-
-var _core = require("@babel/core");
-var types = require("@babel/types");
-
-var _default = (0, _helperPluginUtils.declare)(api => {
-  api.assertVersion(7);
+module.exports = function ({types}) {
   return {
     name: "huahua",
     visitor: {
@@ -40,6 +27,7 @@ var _default = (0, _helperPluginUtils.declare)(api => {
       }
     }
   };
-});
+}
 
-exports.default = _default;
+
+
